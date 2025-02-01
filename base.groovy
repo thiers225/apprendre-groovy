@@ -176,4 +176,50 @@ println personne.nom // N'dri
 
  def fermeture = { x -> x * 2 }
 println fermeture(4) // 8
+
+// Les boucles
+
+// Boucle for
+for (int i = 0; i <= 5; i++) {
+    println i
+}
+
+// Boucle while
+int j = 0
+while (j <= 5) {
+    println j
+    j++
+}
+
+// Boucle do-while
+int k = 0
+do {
+    println k
+    k++
+} while (k <= 5)
+
+// Boucle each
+(1..5).each { println it }
+
+// Boucle sur une liste
+def fruits = ['pomme', 'banane', 'orange']
+fruits.each { println it }
+
+// Boucle sur une map
+def personne = [nom: 'N\'dri', prenom: 'Thierry']
+personne.each { cle, valeur -> println "$cle: $valeur" }
+
+// Les exceptions
+/**
+ * Les exceptions en Groovy sont des objets qui représentent des erreurs ou des
+ * conditions exceptionnelles qui se produisent pendant l'exécution d'un programme.
+ * Les exceptions peuvent être levées (throw) et attrapées (catch) pour gérer les
+ * erreurs et les situations imprévues.
+*/
+
+try {
+    def resultat = 10 / 0
+} catch (ArithmeticException e) {
+    println "Erreur: Division par zéro"
+}
  
